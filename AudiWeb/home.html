@@ -1,78 +1,139 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore Audi vehicle information, servicing, maintenance, engine diagnostics and automotive parts with Audi Motor Build.">
-<meta name="keywords" content="Audi, Audi vehicles, car servicing, vehicle maintenance, engine diagnostics, automotive parts">
-<meta name="author" content="Audi Motor Build">
-<meta name="robots" content="index, follow">
-<title>Home | Audi Motor Build</title>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audi Motor Build</title>
     <link rel="stylesheet" href="style/style.css">
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
+
 <body>
 
 <header>
-    <section class="hero">
-    <div class="hero-content">
-        <div class="logo">
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <div class="ring"></div>
-    <div class="ring"></div>
-</div>
-        <h1>Audi Motor Build</h1>
-        <p>Performance. Luxury. Innovation.</p>
-        <a href="services.html" class="hero-button">Explore Our Services</a>
+    <div class="logo">
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
+        <div class="ring"></div>
     </div>
-</section>
-    <h1>Audi Motor Build</h1>
+
+    <h2>Audi Motor Build</h2>
+
     <nav>
         <a href="home.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
-        <a href="enquire.html">Enquire</a>
-        <a href="enquiries.html">View Enquiries</a>
     </nav>
 </header>
 
-<main>
-    <h2>Welcome to Audi Motor Build</h2>
-    <p>Discover Audi vehicles, vehicle maintenance and automotive parts information.</p>
+<section class="hero">
+    <div class="hero-content">
+        <div class="logo">
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+            <div class="ring"></div>
+        </div>
 
-    <h3>Explore Audi Excellence</h3>
-    <p>
-        Our website provides information about Audi vehicles,
-        vehicle servicing, maintenance and genuine parts.
-        Explore our pages to learn more about caring for your vehicle.
-    </p>
+        <h1>AUDI RS5</h1>
+        <p>Performance. Luxury. Innovation.</p>
+        <a href="services.html" class="hero-button">Explore Our Services</a>
+    </div>
+</section>
 
-    <h3>What We Offer</h3>
-    <ul>
-        <li>Audi vehicle information</li>
-        <li>Vehicle servicing and maintenance information</li>
-        <li>Engine diagnostics and brake maintenance</li>
-        <li>Automotive parts information</li>
-        <li>Contact and service enquiries</li>
-    </ul>
+<main class="home-container">
 
-    <p>
-        Ready to explore? Visit our Services page to learn about
-        the different types of vehicle maintenance.
-    </p>
+    <section>
+        <h1>Welcome to Audi Motor Build</h1>
+        <p>
+            Discover Audi vehicles, professional servicing and quality
+            vehicle parts. We are committed to performance, luxury and reliability.
+        </p>
+    </section>
 
-    <a href="services.html">Explore Our Services</a>
+    <section class="interactive-section">
+        <h2>Explore Audi Motor Build</h2>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="vehicles">Vehicles</button>
+            <button class="tab-button" data-tab="servicing">Servicing</button>
+            <button class="tab-button" data-tab="parts">Parts</button>
+        </div>
+
+        <div id="vehicles" class="tab-content active">
+            <h3>Audi Vehicles</h3>
+            <p>Explore our range of Audi vehicles, designed for comfort, luxury and performance.</p>
+        </div>
+
+        <div id="servicing" class="tab-content">
+            <h3>Audi Servicing</h3>
+            <p>We provide vehicle servicing and maintenance to help keep your Audi in good condition.</p>
+        </div>
+
+        <div id="parts" class="tab-content">
+            <h3>Audi Parts</h3>
+            <p>Find quality parts for your Audi vehicle to support its performance and reliability.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Frequently Asked Questions</h2>
+
+        <button class="accordion">How often should I service my car?</button>
+        <div class="accordion-panel">
+            <p>You should service your car according to the manufacturer's recommended schedule.</p>
+        </div>
+
+        <button class="accordion">Why is regular car servicing important?</button>
+        <div class="accordion-panel">
+            <p>Regular servicing helps maintain your vehicle's performance, safety and reliability.</p>
+        </div>
+
+        <button class="accordion">Do you provide Audi parts?</button>
+        <div class="accordion-panel">
+            <p>Yes, we provide quality parts for Audi vehicles.</p>
+        </div>
+
+        <button class="accordion">Where can I find your services?</button>
+        <div class="accordion-panel">
+            <p>You can view our available services on our Services page.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Audi Image Gallery</h2>
+
+        <div class="gallery">
+            <img src="images/audi1.jpg" alt="Audi vehicle" class="gallery-image">
+            <img src="images/audi2.jpg" alt="Audi vehicle" class="gallery-image">
+            <img src="images/audi3.jpg" alt="Audi vehicle" class="gallery-image">
+            <img src="images/audi4.jpg" alt="Audi vehicle" class="gallery-image">
+        </div>
+    </section>
+
+    <div id="lightbox" class="lightbox">
+        <span id="closeLightbox">&times;</span>
+        <img id="lightboxImage" src="" alt="Enlarged Audi image">
+    </div>
+
+    <section>
+        <h2>Find Us</h2>
+        <p>Our location in Johannesburg, South Africa.</p>
+        <div id="map"></div>
+    </section>
+
 </main>
 
 <footer>
-    <p>&copy; 2026 Audi Motor Build</p>
+    <p>&copy; 2026 Audi Motor Build. All Rights Reserved.</p>
 </footer>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
