@@ -172,3 +172,26 @@ function enquireService(serviceName) {
     localStorage.setItem("selectedAudiService", serviceName);
     window.location.href = "enquire.html";
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // FAQ accordion
+    document.querySelectorAll(".accordion").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const panel = button.nextElementSibling;
+
+            if (!panel || !panel.classList.contains("accordion-panel")) {
+                return;
+            }
+
+            panel.classList.toggle("open");
+
+            const isOpen = panel.classList.contains("open");
+            button.setAttribute("aria-expanded", isOpen);
+        });
+
+        button.setAttribute("aria-expanded", "false");
+    });
+
+
+
