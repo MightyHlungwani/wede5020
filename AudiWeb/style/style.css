@@ -122,6 +122,7 @@ footer {
     nav a {
         padding: 7px;
     }
+}
     
 /* Hovering card effect */
 main {
@@ -160,5 +161,73 @@ main a {
 main a:hover {
     color: white;
 }
+.hero {
+    min-height: 550px;
+    background:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+        url("../images/audi-banner.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
 
+.hero-content h1 {
+    font-size: 90px;
+    color: white;
+    animation: slideIn 1.5s ease;
+}
+
+.hero-content p {
+    font-size: 22px;
+    color: white;
+}
+
+.hero-button {
+    display: inline-block;
+    background: #ff3333;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.hero-button:hover {
+    background: #b30000;
+    transform: translateY(-5px);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 350px;
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 50px;
+    }
+}
+.hero .logo {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.hero .ring {
+    width: 65px;
+    height: 65px;
+    border-width: 5px;
 }
