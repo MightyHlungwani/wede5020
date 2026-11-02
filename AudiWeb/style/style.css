@@ -161,6 +161,176 @@ main a {
 main a:hover {
     color: white;
 }
+/* Interactive sections */
+.interactive-section {
+    margin: 30px 0;
+    padding: 22px;
+    background: linear-gradient(135deg, #202020, #343a40);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(255, 51, 51, 0.2);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.tab-button {
+    background: #333;
+    border: 1px solid #ff3333;
+}
+
+.tab-button.active {
+    background: #ff3333;
+}
+
+.tab-content {
+    display: none;
+    padding: 15px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Accordion */
+.accordion {
+    width: 100%;
+    text-align: left;
+    margin: 5px 0;
+    background: linear-gradient(90deg, #333, #111);
+}
+
+.accordion-panel {
+    display: none;
+    padding: 15px;
+    background: #292929;
+    border-radius: 6px;
+}
+
+.accordion-panel.open {
+    display: block;
+}
+
+/* Image gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 18px rgba(255, 51, 51, 0.35);
+}
+
+/* Lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 32px;
+}
+
+/* Interactive map */
+#map {
+    height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+@media (max-width: 600px) {
+    .interactive-section {
+        padding: 15px;
+    }
+
+    .gallery-image {
+        height: 150px;
+    }
+
+    #map {
+        height: 280px;
+    }
+}
+
+/*
+ Audi-style logo
+ */
+  .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 45px;
+
+        filter:
+            drop-shadow(0 0 8px rgba(255,255,255,0.25))
+            drop-shadow(0 15px 25px rgba(0,0,0,0.8));
+
+        transition: transform 0.5s ease;
+    }
+
+    .logo:hover {
+        transform: scale(1.08);
+    }
+
+    .ring {
+        width: 105px;
+        height: 105px;
+        border: 7px solid #d9d9d9;
+        border-radius: 50%;
+        margin-left: -20px;
+
+        box-shadow:
+            inset 0 0 8px rgba(255,255,255,0.4),
+            0 0 5px rgba(255,255,255,0.25);
+    }
+
+    .ring:first-child {
+        margin-left: 0;
+    }
+
+}
+
 .hero {
     min-height: 550px;
     background:
